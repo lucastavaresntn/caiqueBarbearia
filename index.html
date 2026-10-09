@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caique Barbearia | Barbearia em Avaré</title>
+    <meta name="description" content="Caique Barbearia em Avaré-SP. Cortes, barba e cuidados masculinos com excelência, ambiente sofisticado e profissionais qualificados. Agende seu horário!">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Caique Barbearia | Barbearia em Avaré">
+    <meta property="og:description" content="Experiência, precisão e estilo em cada detalhe. Agende seu horário na melhor barbearia de Avaré.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://caiquebarbearia.com.br">
+    <meta property="og:image" content="assets/og-image.jpg">
+
+    <!-- Favicon (embutido, não precisa de arquivo) -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="container nav-container">
+            <a href="#inicio" class="logo" aria-label="Caique Barbearia - início">
+                <span class="brand-mark logo-icon" aria-hidden="true"></span>
+                <span class="logo-text">CAIQUE <span>BARBEARIA</span></span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                <li><a href="#avaliacoes" class="nav-link">Avaliações</a></li>
+                <li><a href="#localizacao" class="nav-link">Localização</a></li>
+            </ul>
+
+            <a href="https://agendamento.salaovip.com.br/?slug=studiocaiquebarbearia" target="_blank" class="btn btn-primary btn-header">AGENDAR HORÁRIO</a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text reveal">
+                    <span class="brand-mark hero-logo" role="img" aria-label="Logo da Caique Barbearia"></span>
+                    <h1>SEU ESTILO.<br><span>NOSSO TRABALHO.</span></h1>
+                    <p>Experiência, precisão e estilo em cada detalhe. O cuidado que você merece em um ambiente exclusivo.</p>
+
+                    <div class="hero-btns">
+                        <a href="https://agendamento.salaovip.com.br/?slug=studiocaiquebarbearia" target="_blank" class="btn btn-primary">Agendar Horário</a>
+                        <a href="#servicos" class="btn btn-outline">Conhecer Serviços</a>
+                    </div>
+
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <div class="stars"></div>
+                            <p><strong>5,0  ★★★★★</strong> • 448 avaliações</p>
+                        </div>
+                        <div class="trust-divider"></div>
+                        <div class="trust-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Centro de Avaré — SP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Section -->
+        <section id="sobre" class="about section">
+            <div class="container">
+                <div class="about-grid">
+                    
+                    <div class="about-text reveal">
+                        <h2 class="section-title">MAIS QUE UM CORTE.<br><span>UMA EXPERIÊNCIA.</span></h2>
+                        <p>Na Caique Barbearia, acreditamos que o cuidado masculino vai além da estética. Oferecemos um refúgio de sofisticação no coração de Avaré, onde a tradição da barbearia encontra a modernidade técnica.</p>
+                        <p>Nosso compromisso é com a precisão em cada linha e o conforto em cada minuto. Desde o café de boas-vindas até o acabamento final, cada detalhe é pensado para que você saia não apenas com um novo visual, mas renovado.</p>
+
+                        <div class="about-stats">
+                            <div class="stat-card">
+                                <span class="stat-number">5,0</span>
+                                <span class="stat-label">Avaliação Google</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">448+</span>
+                                <span class="stat-label">Avaliações</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">Centro</span>
+                                <span class="stat-label">Avaré — SP</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços Section -->
+        <section id="servicos" class="services section">
+            <div class="container">
+                <h2 class="section-title text-center">NOSSOS <span>SERVIÇOS</span></h2>
+                <div class="services-grid">
+                    <!-- Serviço 1 -->
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fas fa-cut"></i></div>
+                        <h3>Corte Masculino</h3>
+                        <p>Cortes modernos e clássicos adaptados ao seu formato de rosto e estilo pessoal.</p>
+                        <a href="https://agendamento.salaovip.com.br/?slug=studiocaiquebarbearia" target="_blank" class="btn btn-small">Agendar</a>
+                    </div>
+                    <!-- Serviço 2 -->
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fas fa-scissors"></i></div>
+                        <h3>Corte com Tesoura</h3>
+                        <p>Técnica tradicional para quem busca um acabamento mais natural e sofisticado.</p>
+                        <a href="https://agendamento.salaovip.com.br/?slug=studiocaiquebarbearia" target="_blank" class="btn btn-small">Agendar</a>
+                    </div>
+                    <!-- Serviço 3 -->
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fas fa-razor"></i></div>
+                        <h3>Barba</h3>
+                        <p>Barboterapia completa com toalha quente e produtos de alta performance.</p>
+                        <a href="https://agendamento.salaovip.com.br/?slug=studiocaiquebarbearia" target="_blank" class="btn btn-small">Agendar</a>
+                    </div>
+                    <!-- Serviço 4 -->
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+                        <h3>Corte + Barba</h3>
+                        <p>O combo completo para a renovação total do visual e cuidado integral.</p>
+                        <a href="https://agendamento.salaovip.com.br/?slug=studiocaiquebarbearia" target="_blank" class="btn btn-small">Agendar</a>
+                    </div>
+                    <!-- Serviço 5 -->
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fas fa-magic"></i></div>
+                        <h3>Acabamento</h3>
+                        <p>Manutenção precisa do pezinho e contornos para manter o corte sempre impecável.</p>
+                        <a href="https://agendamento.salaovip.com.br/?slug=studiocaiquebarbearia" target="_blank" class="btn btn-small">Agendar</a>
+                    </div>
+                    <!-- Serviço 6 -->
+                    <div class="service-card reveal">
+                        <div class="service-icon"><i class="fas fa-star"></i></div>
+                        <h3>Serviços Personalizados</h3>
+                        <p>Consultoria de estilo para encontrar a melhor opção para sua imagem.</p>
+                        <a href="https://agendamento.salaovip.com.br/?slug=studiocaiquebarbearia" target="_blank" class="btn btn-small">Agendar</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria Section -->
+        <section id="galeria" class="gallery section">
+            <div class="container">
+                <h2 class="section-title text-center">NOSSA <span>GALERIA</span></h2>
+
+                <div class="gallery-grid">
+                    <button class="gallery-item reveal" type="button" data-full="https://lh3.googleusercontent.com/p/AF1QipMGLfphCVsNOj-ADusXKGo60xpNasgPaRvqh6ey=s1600" aria-label="Ampliar foto 1">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipMGLfphCVsNOj-ADusXKGo60xpNasgPaRvqh6ey=s500" alt="Foto 1 da Caique Barbearia" loading="lazy">
+                    </button>
+                    <button class="gallery-item reveal" type="button" data-full="https://lh3.googleusercontent.com/p/AF1QipPMVnCQIfGm9nVOjOMWrhM1Ziv3iYsqXlep076k=s1600" aria-label="Ampliar foto 2">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipPMVnCQIfGm9nVOjOMWrhM1Ziv3iYsqXlep076k=s500" alt="Foto 2 da Caique Barbearia" loading="lazy">
+                    </button>
+                    <button class="gallery-item reveal" type="button" data-full="https://lh3.googleusercontent.com/p/AF1QipOh_AhBGFWP3TPfgeJWkHZM-xyTWUiKdsZiW-t0=s1600" aria-label="Ampliar foto 3">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipOh_AhBGFWP3TPfgeJWkHZM-xyTWUiKdsZiW-t0=s500" alt="Foto 3 da Caique Barbearia" loading="lazy">
+                    </button>
+                    <button class="gallery-item reveal" type="button" data-full="https://lh3.googleusercontent.com/p/AF1QipNzWIVVmyms8yipj7iMdSExSbzINERQ4tziwX1K=s1600" aria-label="Ampliar foto 4">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipNzWIVVmyms8yipj7iMdSExSbzINERQ4tziwX1K=s500" alt="Foto 4 da Caique Barbearia" loading="lazy">
+                    </button>
+                    <button class="gallery-item reveal" type="button" data-full="https://lh3.googleusercontent.com/p/AF1QipP7nKgMi99LPwcj9Oya1dv3p1bmA0oNbCuhzPda=s1600" aria-label="Ampliar foto 5">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipP7nKgMi99LPwcj9Oya1dv3p1bmA0oNbCuhzPda=s500" alt="Foto 5 da Caique Barbearia" loading="lazy">
+                    </button>
+                    <button class="gallery-item reveal" type="button" data-full="https://lh3.googleusercontent.com/p/AF1QipNOXgT8Mj8SfLk-sZlQXUkHFZ74WZ3YqNo2tUXC=s1600" aria-label="Ampliar foto 6">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipNOXgT8Mj8SfLk-sZlQXUkHFZ74WZ3YqNo2tUXC=s500" alt="Foto 6 da Caique Barbearia" loading="lazy">
+                    </button>
+                    <button class="gallery-item reveal" type="button" data-full="https://lh3.googleusercontent.com/p/AF1QipOqOKnEeeAg9mGTgWWlFsFF9DLhUqFlcQmHGQJp=s1600" aria-label="Ampliar foto 7">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipOqOKnEeeAg9mGTgWWlFsFF9DLhUqFlcQmHGQJp=s500" alt="Foto 7 da Caique Barbearia" loading="lazy">
+                    </button>
+                    <button class="gallery-item reveal" type="button" data-full="https://lh3.googleusercontent.com/p/AF1QipMnJrpuVLhyepPuzGNgfy8_rqjBDfZrvfnaRloN=s1600" aria-label="Ampliar foto 8">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipMnJrpuVLhyepPuzGNgfy8_rqjBDfZrvfnaRloN=s500" alt="Foto 8 da Caique Barbearia" loading="lazy">
+                    </button>
+                    <button class="gallery-item reveal" type="button" data-full="https://lh3.googleusercontent.com/p/AF1QipNJDtJ-Jm5TQjcho0ryHts4xSiE8-TI0GC3LQce=s1600" aria-label="Ampliar foto 9">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipNJDtJ-Jm5TQjcho0ryHts4xSiE8-TI0GC3LQce=s500" alt="Foto 9 da Caique Barbearia" loading="lazy">
+                    </button>
+                    <button class="gallery-item reveal" type="button" data-full="https://lh3.googleusercontent.com/p/AF1QipMs53e-uTNlOAVAuDym9PUolvL2m13-_ECmGw5p=s1600" aria-label="Ampliar foto 10">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipMs53e-uTNlOAVAuDym9PUolvL2m13-_ECmGw5p=s500" alt="Foto 10 da Caique Barbearia" loading="lazy">
+                    </button>
+                    <button class="gallery-item reveal" type="button" data-full="https://lh3.googleusercontent.com/p/AF1QipOb85BEbNrpFVe6nno9O9P4EZVaFHGSOIyYKUE8=s1600" aria-label="Ampliar foto 11">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipOb85BEbNrpFVe6nno9O9P4EZVaFHGSOIyYKUE8=s500" alt="Foto 11 da Caique Barbearia" loading="lazy">
+                    </button>
+                    <button class="gallery-item reveal" type="button" data-full="https://lh3.googleusercontent.com/p/AF1QipOeRc3c2yM_qdtpKjmIzdkddAdAC6wjYpPVFLCb=s1600" aria-label="Ampliar foto 12">
+                        <img src="https://lh3.googleusercontent.com/p/AF1QipOeRc3c2yM_qdtpKjmIzdkddAdAC6wjYpPVFLCb=s500" alt="Foto 12 da Caique Barbearia" loading="lazy">
+                    </button>
+                </div>
+
+                <div class="gallery-more">
+                    <a href="https://www.instagram.com/caiquebarbearia/" target="_blank" rel="noopener" class="btn btn-outline">
+                        <i class="fab fa-instagram"></i>&nbsp; Ver mais no Instagram
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experiência Section -->
+        <section class="experience section">
+            <div class="container">
+                <div class="exp-grid">
+                    <div class="exp-item reveal">
+                        <i class="fas fa-snowflake"></i>
+                        <h3>Ambiente Climatizado</h3>
+                        <p>Conforto térmico para você relaxar enquanto cuidamos do seu visual.</p>
+                    </div>
+                    <div class="exp-item reveal">
+                        <i class="fas fa-user-check"></i>
+                        <h3>Atendimento de Primeira</h3>
+                        <p>Cordialidade e atenção em cada etapa do seu atendimento.</p>
+                    </div>
+                    <div class="exp-item reveal">
+                        <i class="fas fa-coffee"></i>
+                        <h3>Café para Clientes</h3>
+                        <p>Um café premium para tornar sua espera mais agradável.</p>
+                    </div>
+                    <div class="exp-item reveal">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Localização Central</h3>
+                        <p>Facilidade de acesso no coração de Avaré — SP.</p>
+                    </div>
+                    <div class="exp-item reveal">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Profissionais Especializados</h3>
+                        <p>Equipe qualificada e atualizada com as tendências mundiais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Avaliações Section -->
+        <section id="avaliacoes" class="testimonials section">
+            <div class="container">
+                <h2 class="section-title text-center">O QUE <span>DIZEM</span> NOSSOS CLIENTES</h2>
+                <div class="testimonials-trust">
+                    <div class="stars">★★★★★</div>
+                    <p><strong>5,0</strong> • 448 avaliações</p>
+                </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-track">
+                        <!-- Depoimento 1 -->
+                        <div class="testimonial-card">
+                            <div class="client-info">
+                                <div class="client-avatar"><i class="fas fa-user"></i></div>
+                                <div class="client-name">Cliente Satisfeito</div>
+                            </div>
+                            <p>"Espaço excelente, climatizado e muito aconchegante. Atendimento de primeira."</p>
+                            <div class="card-stars">★★★★★</div>
+                        </div>
+                        <!-- Depoimento 2 -->
+                        <div class="testimonial-card">
+                            <div class="client-info">
+                                <div class="client-avatar"><i class="fas fa-user"></i></div>
+                                <div class="client-name">Cliente Satisfeito</div>
+                            </div>
+                            <p>"Adorei! O ambiente é acolhedor."</p>
+                            <div class="card-stars">★★★★★</div>
+                        </div>
+                        <!-- Depoimento 3 -->
+                        <div class="testimonial-card">
+                            <div class="client-info">
+                                <div class="client-avatar"><i class="fas fa-user"></i></div>
+                                <div class="client-name">Cliente Satisfeito</div>
+                            </div>
+                            <p>"Excelente profissional! A equipe também não fica para trás."</p>
+                            <div class="card-stars">★★★★★</div>
+                        </div>
+                        <!-- Depoimento 4 -->
+                        <div class="testimonial-card">
+                            <div class="client-info">
+                                <div class="client-avatar"><i class="fas fa-user"></i></div>
+                                <div class="client-name">Cliente Satisfeito</div>
+                            </div>
+                            <p>"Melhor barbearia da região. Atendimento impecável e corte preciso."</p>
+                            <div class="card-stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <div class="carousel-nav">
+                        <button class="nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="nav-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="carousel-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta section">
+            <div class="container">
+                <div class="cta-box reveal">
+                    <h2>PRONTO PARA RENOVAR O VISUAL?</h2>
+                    <p>Agende seu horário e venha viver a experiência da Caique Barbearia.</p>
+                    <div class="cta-btns">
+                        <a href="https://agendamento.salaovip.com.br/?slug=studiocaiquebarbearia" target="_blank" class="btn btn-primary">AGENDAR AGORA</a>
+                        <a href="https://wa.me/5514997558314" target="_blank" class="btn btn-outline">FALAR NO WHATSAPP</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Localização Section -->
+        <section id="localizacao" class="location section">
+            <div class="container">
+                <h2 class="section-title text-center">ONDE <span>ESTAMOS</span></h2>
+                <div class="location-grid">
+                    <div class="location-info reveal">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Endereço</strong>
+                                <p>Largo Santa Cruz, 195<br>Centro — Avaré/SP<br>CEP 18700-241</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Contato</strong>
+                                <p>(14) 99755-8314</p>
+                            </div>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Largo+Santa+Cruz+195+Avaré+SP" target="_blank" class="btn btn-outline btn-full">Como Chegar</a>
+                    </div>
+                    <div class="location-map reveal">
+                        <!-- Placeholder para Mapa / Imagem de Localização -->
+                        <div class="map-placeholder">
+                            <i class="fas fa-map"></i>
+                            <p>Google Maps Integration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" aria-label="Caique Barbearia - voltar ao topo">
+                        <span class="brand-mark logo-icon" aria-hidden="true"></span>
+                        <span class="logo-text">CAIQUE <span>BARBEARIA</span></span>
+                    </a>
+                    <p>Sofisticação, precisão e estilo no coração de Avaré.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p><i class="fab fa-whatsapp"></i> (14) 99755-8314</p>
+                    <p><i class="fas fa-envelope"></i> contato@caiquebarbearia.com.br</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Largo Santa Cruz, 195 - Avaré/SP</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Caique Barbearia. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Elements -->
+    <a href="https://wa.me/5514997558314" target="_blank" class="whatsapp-float" aria-label="Conversar no WhatsApp">
+        <span class="tooltip">Fale conosco!</span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button id="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <button class="lb-prev" aria-label="Foto anterior"><i class="fas fa-chevron-left"></i></button>
+        <img src="" alt="Imagem Ampliada">
+        <button class="lb-next" aria-label="Próxima foto"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
